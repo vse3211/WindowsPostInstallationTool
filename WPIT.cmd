@@ -8,6 +8,8 @@ echo Created by vse3211
 echo.
 echo Windows Post Installation Tool
 echo.
+echo 0. EXIT
+echo.
 echo ============BASIC=============
 echo 10. Google.Chrome
 echo 11. Mozilla.Firefox
@@ -50,10 +52,11 @@ echo ==========STREAMING===========
 echo 60. OBSProject.OBSStudio
 echo.
 echo ========REMOTE-CONTROL========
-echo 70. AnyDesk
-echo 71. TeamViewer
-echo 72. TeamViewer.Host
-echo 73. TeamViewer.QuickSupport
+echo 70. RustDesk
+echo 71. AnyDesk
+echo 72. TeamViewer
+echo 73. TeamViewer.Host
+echo 74. TeamViewer.QuickSupport
 echo.
 echo ======ADDITIONAL-SCRIPTS======
 echo.
@@ -64,6 +67,8 @@ rem Я за*бался писать это меню! Надеюсь оно то�
 rem Мог бы я надеятся что это никто не прочитает, но если прочитал, а ты это прочитал, то ты молодец! Держи в секрете
 
 set /p choice="Choose an option (10-...): "
+
+if "%choice%"=="0" goto EOF
 
 rem Basic
 if "%choice%"=="10" set pname=Google.Chrome
@@ -107,10 +112,11 @@ rem Streaming
 if "%choice%"=="60" set pname=OBSProject.OBSStudio
 
 rem Remote control
-if "%choice%"=="70" set pname=AnyDesk.AnyDesk
-if "%choice%"=="71" set pname=TeamViewer.TeamViewer
-if "%choice%"=="72" set pname=TeamViewer.TeamViewer.Host
-if "%choice%"=="73" set pname=TeamViewer.TeamViewer.QuickSupport
+if "%choice%"=="70" set pname=RustDesk.RustDesk
+if "%choice%"=="71" set pname=AnyDesk.AnyDesk
+if "%choice%"=="72" set pname=TeamViewer.TeamViewer
+if "%choice%"=="73" set pname=TeamViewer.TeamViewer.Host
+if "%choice%"=="74" set pname=TeamViewer.TeamViewer.QuickSupport
 
 rem Additional
 if "%choice%"=="900" start SublimeTextContextMenu.bat && goto main
@@ -127,3 +133,5 @@ echo.
 echo Installation %pname% FINISHED, check logs and press enter for back to main or close this window
 pause
 goto main
+
+:EOF
