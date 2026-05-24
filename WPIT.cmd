@@ -120,6 +120,7 @@ goto install
 :install
 cls
 echo Installation %pname% in progress...
+echo You can cancel operation: just press CTRL+C in this window
 echo.
 winget install -e --id %pname%
 echo.
