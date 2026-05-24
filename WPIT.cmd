@@ -58,6 +58,7 @@ echo.
 echo ======ADDITIONAL-SCRIPTS======
 echo.
 echo 900. SublimeTextContextMenu - Add or remove SublimeText from windows context menu
+echo 901. MAS - do own your risk!
 
 rem Я за*бался писать это меню! Надеюсь оно того стоило...
 rem Мог бы я надеятся что это никто не прочитает, но если прочитал, а ты это прочитал, то ты молодец! Держи в секрете
@@ -113,14 +114,15 @@ if "%choice%"=="73" set pname=TeamViewer.TeamViewer.QuickSupport
 
 rem Additional
 if "%choice%"=="900" start SublimeTextContextMenu.bat && goto main
+if "%choice%"=="901" start powershell "irm https://get.activated.win | iex" && goto main
 goto install
 
 :install
 cls
-echo Installation %choice% in progress...
+echo Installation %pname% in progress...
 echo.
-winget install -e --id %choice%
+winget install -e --id %pname%
 echo.
-echo Installation %choice% FINISHED, check logs and press enter for back to main or close this window
+echo Installation %pname% FINISHED, check logs and press enter for back to main or close this window
 pause
 goto main
