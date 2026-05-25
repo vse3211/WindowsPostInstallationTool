@@ -48,6 +48,7 @@ echo 514. Microsoft.VisualStudio.2022.Enterprise
 echo 515. Microsoft.VisualStudio.2022.BuildTools
 echo 516. Microsoft.VisualStudioCode.Insiders
 echo 517. Git
+echo 518. Microsoft.DotNet.SDK.10
 echo.
 echo ==========STREAMING===========
 echo 60. OBSProject.OBSStudio
@@ -109,6 +110,7 @@ if "%choice%"=="514" set pname=Microsoft.VisualStudio.2022.Enterprise
 if "%choice%"=="515" set pname=Microsoft.VisualStudio.2022.BuildTools
 if "%choice%"=="516" set pname=Microsoft.VisualStudioCode.Insiders
 if "%choice%"=="517" set pname=Git.Git
+if "%choice%"=="518" set pname=Microsoft.DotNet.SDK.10
 
 rem Streaming
 if "%choice%"=="60" set pname=OBSProject.OBSStudio
