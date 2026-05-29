@@ -15,6 +15,7 @@ echo 10. Google.Chrome
 echo 11. Mozilla.Firefox
 echo 12. Microsoft.Office
 echo 13. 7zip
+echo 14. MarcoCalautti.DeltaPatcher
 echo.
 echo ===========TORRENT============
 echo 20. qBittorrent
@@ -80,6 +81,7 @@ if "%choice%"=="10" set pname=Google.Chrome
 if "%choice%"=="11" set pname=Mozilla.Firefox
 if "%choice%"=="12" set pname=Microsoft.Office
 if "%choice%"=="13" set pname=7zip.7zip
+if "%choice%"=="14" set pname=MarcoCalautti.DeltaPatcher
 
 rem Torrent
 if "%choice%"=="20" set pname=qBittorrent.qBittorrent
